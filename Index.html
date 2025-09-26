@@ -1,1 +1,137 @@
-file:///C:/Users/punya/Downloads/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital DreamWorks by Punya Ramchandani</title>
+  <meta name="description" content="Digital DreamWorks by Punya Ramchandani — explore and connect with us across WhatsApp, Instagram, LinkedIn, TikTok, Pinterest, YouTube, and email.">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Favicon (optional): replace href with your icon file -->
+  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <h1>Digital DreamWorks by Punya Ramchandani</h1>
+  </header>
+
+  <main id="content" class="content" role="main">
+    <p class="intro-text">
+      Click below to explore and connect with us across our platforms!
+    </p>
+
+    <nav aria-label="Social links" class="links" role="navigation">
+      <!-- WhatsApp -->
+      <a class="social-btn whatsapp"
+         href="https://wa.me/971503173383"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Open WhatsApp Business chat">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <span>WhatsApp Business</span>
+      </a>
+
+      <!-- Email -->
+      <!-- TODO: verify email spelling ('Digtal' vs 'Digital') before publishing -->
+      <a class="social-btn email"
+         href="mailto:Digtaldreamworksbypunya@gmail.com"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Send us an email">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <span>Email</span>
+      </a>
+
+      <!-- Instagram dropdown with 4 links (keyboard accessible) -->
+      <div class="dropdown">
+        <button class="dropbtn instagram"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="ig-menu">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span>Instagram</span>
+          <i class="fa-solid fa-chevron-down caret" aria-hidden="true"></i>
+        </button>
+        <div id="ig-menu" class="dropdown-content" role="menu">
+          <a role="menuitem" href="https://www.instagram.com/digital_dreamworks_by_punya/" target="_blank" rel="noopener noreferrer">Digital DreamWorks by Punya</a>
+          <a role="menuitem" href="https://www.instagram.com/digistartips/" target="_blank" rel="noopener noreferrer">DigiStart Tips</a>
+          <a role="menuitem" href="https://www.instagram.com/fun_fridays_with_clicksy/" target="_blank" rel="noopener noreferrer">Fun Fridays with Clicksy</a>
+          <a role="menuitem" href="https://www.instagram.com/printspiration_thursdays/" target="_blank" rel="noopener noreferrer">Printspiration Thursdays</a>
+        </div>
+      </div>
+
+      <!-- LinkedIn -->
+      <a class="social-btn linkedin"
+         href="https://www.linkedin.com/in/punya-ramchandani-211021318/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visit our LinkedIn profile">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+        <span>LinkedIn</span>
+      </a>
+
+      <!-- TikTok -->
+      <a class="social-btn tiktok"
+         href="https://www.tiktok.com/@digitaldreamworksbypunya?_t=ZS-8zqEdRSnjFP&_r=1"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visit our TikTok profile">
+        <i class="fab fa-tiktok" aria-hidden="true"></i>
+        <span>TikTok</span>
+      </a>
+
+      <!-- Pinterest -->
+      <a class="social-btn pinterest"
+         href="https://www.pinterest.com/DigitalDreamworksByPunya/"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visit our Pinterest profile">
+        <i class="fab fa-pinterest" aria-hidden="true"></i>
+        <span>Pinterest</span>
+      </a>
+
+      <!-- YouTube -->
+      <a class="social-btn youtube"
+         href="https://www.youtube.com/@DigitalDreamworksByPunya"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Visit our YouTube channel">
+        <i class="fab fa-youtube" aria-hidden="true"></i>
+        <span>YouTube</span>
+      </a>
+    </nav>
+  </main>
+
+  <script>
+    // Accessible dropdown toggle (supports click + keyboard)
+    (function () {
+      const btn = document.querySelector('.dropbtn.instagram');
+      const menu = document.getElementById('ig-menu');
+
+      const closeMenu = () => {
+        menu.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      };
+
+      const openMenu = () => {
+        menu.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      };
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = menu.classList.contains('open');
+        if (isOpen) { closeMenu(); } else { openMenu(); }
+      });
+
+      // Close on outside click or ESC
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+      });
+    })();
+  </script>
+</body>
+</html>
+
+
